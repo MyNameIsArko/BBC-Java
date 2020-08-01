@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('kotlin-stdlib-1.3.72.jar'))

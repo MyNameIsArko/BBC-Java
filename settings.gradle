@@ -1,0 +1,10 @@
+include ':okio-2.7.0'
+include ':kotlin-stdlib-common-1.3.70'
+include ':kotlin-stdlib-1.3.72'
+include ':annotations-13.0'
+include ':okhttp-4.8.0'
+include ':picasso-2.71828'
+include ':json-simple-1.1'
+include ':jsoup-1.13.1'
+include ':app'
+rootProject.name = "BBC"
