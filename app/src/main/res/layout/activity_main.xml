@@ -19,37 +19,94 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/button1"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:onClick="selectVideo"
-            android:scaleType="fitCenter"
-            app:srcCompat="@android:drawable/sym_def_app_icon" />
+            android:layout_height="match_parent"
+            android:layout_weight="0.075">
 
-        <ImageButton
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:onClick="selectVideo"
-            android:scaleType="fitCenter"
-            app:srcCompat="@android:drawable/sym_def_app_icon" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:onClick="selectVideo"
-            android:scaleType="fitCenter"
-            app:srcCompat="@android:drawable/sym_def_app_icon" />
+                <ImageButton
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:onClick="selectVideo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                <ImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:onClick="selectVideo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                <ImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:onClick="selectVideo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                <ImageButton
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:onClick="selectVideo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                <ImageButton
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:onClick="selectVideo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                <ImageButton
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:onClick="selectVideo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                <ImageButton
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:onClick="selectVideo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                <ImageButton
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:onClick="selectVideo"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/sym_def_app_icon" />
+            </LinearLayout>
+        </ScrollView>
 
         <Button
             android:id="@+id/exitButton"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.4"
             android:onClick="exitApp"
             android:text="Wyjdź" />

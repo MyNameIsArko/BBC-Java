@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private String url = "https://www.googleapis.com/youtube/v3/search?key=" + apiKey + "&channelId=" + channelId + "&part=snippet,id&order=date&maxResults=30";
 
     JSONArray allVideos = null;
-    JSONObject[] bbcVideos = new JSONObject[3];
+    JSONObject[] bbcVideos = new JSONObject[8];
 
-    ImageButton btn1, btn2, btn3;
+    ImageButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.button1);
         btn2 = findViewById(R.id.button2);
         btn3 = findViewById(R.id.button3);
+        btn4 = findViewById(R.id.button4);
+        btn5 = findViewById(R.id.button5);
+        btn6 = findViewById(R.id.button6);
+        btn7 = findViewById(R.id.button7);
+        btn8 = findViewById(R.id.button8);
 
         Thread t = new Thread(new Runnable() {
             @Override
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     private void selectBBC() {
         int bbcCounter = 0;
         for (int i = 0; i < allVideos.size(); i++) {
-            if(bbcCounter >= 3) break;
+            if(bbcCounter >= 8) break;
             JSONObject video = (JSONObject) allVideos.get(i);
             JSONObject snippet = (JSONObject) video.get("snippet");
             String title = (String) snippet.get("title");
@@ -110,6 +115,21 @@ public class MainActivity extends AppCompatActivity {
                 case 3:
                     Picasso.get().load(thumbnailUrl).into(btn3);
                     break;
+                case 4:
+                    Picasso.get().load(thumbnailUrl).into(btn4);
+                    break;
+                case 5:
+                    Picasso.get().load(thumbnailUrl).into(btn5);
+                    break;
+                case 6:
+                    Picasso.get().load(thumbnailUrl).into(btn6);
+                    break;
+                case 7:
+                    Picasso.get().load(thumbnailUrl).into(btn7);
+                    break;
+                case 8:
+                    Picasso.get().load(thumbnailUrl).into(btn8);
+                    break;
             }
         }
     }
@@ -129,6 +149,26 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.button3:
                 id = (JSONObject) bbcVideos[2].get("id");
+                videoId = (String) id.get("videoId");
+                break;
+            case R.id.button4:
+                id = (JSONObject) bbcVideos[3].get("id");
+                videoId = (String) id.get("videoId");
+                break;
+            case R.id.button5:
+                id = (JSONObject) bbcVideos[4].get("id");
+                videoId = (String) id.get("videoId");
+                break;
+            case R.id.button6:
+                id = (JSONObject) bbcVideos[5].get("id");
+                videoId = (String) id.get("videoId");
+                break;
+            case R.id.button7:
+                id = (JSONObject) bbcVideos[6].get("id");
+                videoId = (String) id.get("videoId");
+                break;
+            case R.id.button8:
+                id = (JSONObject) bbcVideos[7].get("id");
                 videoId = (String) id.get("videoId");
                 break;
         }
